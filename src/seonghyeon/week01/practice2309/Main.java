@@ -1,6 +1,7 @@
-package me.week01.practice2309;
+package seonghyeon.week01.practice2309;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Scanner;
 

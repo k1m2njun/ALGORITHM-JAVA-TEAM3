@@ -1,4 +1,4 @@
-package me.week01.practice2979;
+package seonghyeon.week01.practice2979;
 
 import java.util.Scanner;
 
