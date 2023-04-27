@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-public class BOJ02979 {
+public class BOJ2979 {
 
     public static void main(String[] args) {
 
@@ -31,7 +31,7 @@ public class BOJ02979 {
             int endMinute = scanner.nextInt();
 
             int[] zero = new int[100];
-            Arrays.fill(zero, 0);
+			Arrays.fill(zero, 0);
 
             cars.add(fillOneArray(zero, startMinute, endMinute));
         }
