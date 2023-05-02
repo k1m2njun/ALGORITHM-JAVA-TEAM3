@@ -1,5 +1,5 @@
 // HashMap 생성 후 str -> int int -> str
-// HashMap 공부 : https://coding-factory.tistory.com/556
+// HashMap 사용법 : https://coding-factory.tistory.com/556
 
 import java.io.BufferedReader;
 import java.io.IOException;
