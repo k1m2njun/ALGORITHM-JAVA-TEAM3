@@ -22,11 +22,11 @@ public class Main {
         for(int i = 0; i < K; i++) {
             sum += arr[i]; // 0~K 온도 더하기
         }
-        int max = sum; // 최대값으로 저장
+        int max = sum; 
         for(int i = K; i < N; i++) {
             sum += arr[i]; //i번째 숫자 더하기
             sum -= arr[i-K]; //i-K번째 숫자 빼기
-            max = Math.max(max, sum); //최대값을 max로 취함
+            max = Math.max(max, sum); 
         }
         System.out.println(max); //최대값 출력
     }
