@@ -16,15 +16,15 @@ public class Main {
         int n = Integer.parseInt(st.nextToken());
         int m = Integer.parseInt(st.nextToken());
 
-        HashMap<String, String> hash = new HashMap<>();
+        HashMap<String, String> map = new HashMap<>();
         for (int i = 1; i <= n; i++) {
             String str = br.readLine();
-            hash.put(Integer.toString(i), str);
-            hash.put(str, Integer.toString(i));
+            map.put(Integer.toString(i), str);
+            map.put(str, Integer.toString(i));
         }
 
         for (int i = 0; i < m; i++) {
-            sb.append(hash.get(br.readLine())+"\n");
+            sb.append(map.get(br.readLine())+"\n");
         }
 
         System.out.println(sb);
