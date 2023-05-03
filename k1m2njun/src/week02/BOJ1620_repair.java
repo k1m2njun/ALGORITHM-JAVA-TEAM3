@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.HashMap;
 
-public class BOJ1621_repair {
+public class BOJ1620_repair {
 
 	public static void main(String[] args) throws IOException {
 		
@@ -24,13 +24,18 @@ public class BOJ1621_repair {
 			Q[i] = br.readLine();
 		}
 		
+		StringBuilder sb = new StringBuilder();
+		
 		for(String q : Q) {
 			if(Character.isDigit(q.charAt(0))) {
-				System.out.println(pokemons.get(Integer.parseInt(q)));
+//				System.out.println(pokemons.get(Integer.parseInt(q)));
+				sb.append(pokemons.get(Integer.parseInt(q)) + "\n");
 			} else {
-				System.out.println(getKey(pokemons, q));
+//				System.out.println(getKey(pokemons, q));
+				sb.append(getKey(pokemons, q) + "\n");
 			}
 		}
+		System.out.println(sb);
 	}
 	
 	public static <K, V> K getKey(HashMap<K, V> map, V value) {
