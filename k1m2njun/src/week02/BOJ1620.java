@@ -8,8 +8,8 @@ public class BOJ1620 {
 	public static void main(String[] args) {
 		
 		Scanner scanner = new Scanner(System.in);
-		int N = scanner.nextInt(); 
-		int M = scanner.nextInt(); 
+		int N = scanner.nextInt();
+		int M = scanner.nextInt();
 		
 		ArrayList<String> pokemons = new ArrayList<>();
 		for(int i = 0; i < N; i++) {
