@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Programmers150371_repair2 {
+public class Programmers150370_repair2 {
 	
 	public static int getTotalDate(String date) {
 		int year = Integer.parseInt(date.split("\\.")[0]);

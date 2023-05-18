@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Programmers150371_repair {
+public class Programmers150370_repair {
 	
 	public static int[] addArr(int[] arr, int size, int num) {
 		if (size >= arr.length) {

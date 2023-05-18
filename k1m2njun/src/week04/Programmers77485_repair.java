@@ -5,20 +5,16 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Programmers77485 {
+public class Programmers77485_repair {
 	
 	public static int[][] createMatrix(int rows, int columns) {
 		int matrix[][] = new int[rows][columns];
 		
 		for (int row = 0; row < rows; row++) {
-			int a = rows * row; 
-			int[] arr = new int[rows];
 			for (int column = 0; column < columns; column++) {
-				arr[column] = column + 1 + a;
+				matrix[row][column] = row * columns + column + 1;
 			}
-			matrix[row] = arr;
 		}
-		
 		return matrix;
 	}
 
@@ -40,31 +36,29 @@ public class Programmers77485 {
 			int x2 = queries[query][2]-1;
 			int y2 = queries[query][3]-1;
 			
-			Set<Integer> hs = new HashSet<>();
-			
 			int tmp = matrix[x1][y2];
+			int min = tmp;
 			
-			for (int i = y2; i > y1; i--) {
+			for (int i = y2; i > y1; i--) { // matrix 열
 				matrix[x1][i] = matrix[x1][i-1]; 
-				hs.add(matrix[x1][i]);
+				if (min > matrix[x1][i]) min = matrix[x1][i];
 			}
-			for (int i = x1; i < x2; i++) { 
+			for (int i = x1; i < x2; i++) { // matrix 행
 				matrix[i][y1] = matrix[i+1][y1]; 
-				hs.add(matrix[i][y1]);
+				if (min > matrix[i][y1]) min = matrix[i][y1];
 			}
-			for (int i = y1; i < y2; i++) { 
+			for (int i = y1; i < y2; i++) { // matrix 열
 				matrix[x2][i] = matrix[x2][i+1]; 
-				hs.add(matrix[x2][i]);
+				if (min > matrix[x2][i]) min = matrix[x2][i];
 			}
 			
-			for (int i = x2; i > x1; i--) {
+			for (int i = x2; i > x1; i--) { // matrix 행
 				matrix[i][y2] = matrix[i-1][y2]; 
-				hs.add(matrix[i][y2]);
+				if (min > matrix[i][y2]) min = matrix[i][y2];
 			}
 			matrix[x1+1][y2] = tmp;
-			hs.add(matrix[x1+1][y2]);
 			
-			answer[query] = Collections.min(hs);
+			answer[query] = min;
 		}
 		System.out.println(Arrays.toString(answer));
 	}
