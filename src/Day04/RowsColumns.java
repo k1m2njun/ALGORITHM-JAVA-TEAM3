@@ -18,15 +18,9 @@ public class RowsColumns {
                 num++;
             }
         }
-        for(int i=1; i<=rows; i++){
-            for(int j=1; j<=columns; j++){
-                System.out.printf("   %d    ", total[i][j]);
-            }
-            System.out.printf("\n");
-        }
         int length = 0;
         while(length < queries.length){
-           //가장 위쪽 회전
+            //가장 위쪽 회전
             temp = total[queries[length][0]][queries[length][3]];
             if(temp < min){
                 min = temp;
