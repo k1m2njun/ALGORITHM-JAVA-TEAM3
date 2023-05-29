@@ -16,10 +16,6 @@ public class Programmers92341_repair1 {
 							"09:34 5961 IN", "10:34 5961 OUT",
 							"11:34 5961 IN", "12:34 5961 OUT"};
 		
-//		int[] fees = {120, 0, 60, 591};
-//		String[] records = {"16:00 3961 IN","16:00 0202 IN","18:00 3961 OUT","18:00 0202 OUT","23:58 3961 IN"};
-		
-//		solution(fees, records);
 		System.out.println(Arrays.toString(solution(fees, records)));
 	}
 	
