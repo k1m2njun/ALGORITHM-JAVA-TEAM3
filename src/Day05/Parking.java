@@ -6,8 +6,9 @@ public class Parking {
     public static void main(String[] args) {
         int[] fees = {1, 461, 1, 10};
         String[] records = {"00:00 1234 IN"};
-        HashMap<String, String> car = new HashMap<String, String>();
-        HashMap<String, Integer> carTime = new HashMap<String, Integer>();
+        HashMap<String, String> car = new HashMap<String, String>(); //출차되지않고 입차된 차들을 저장
+        HashMap<String, Integer> carTime = new HashMap<String, Integer>(); // 출차된차들의 누적시간 계산
+
         for(int i=0; i< records.length; i++){
             String[] temp = records[i].split(" ");
             if(car.containsKey(temp[1])){ //car에 이미 입차된 차가 있다면 출차하는 차이므로 시간을 구해서 carTime에 put
