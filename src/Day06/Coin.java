@@ -1,6 +1,5 @@
 package Day06;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Coin {
