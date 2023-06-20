@@ -20,7 +20,6 @@ public class ATM {
             for(int j=0; j<=i; j++){
                 total += time.get(j);
             }
-            //System.out.println(total);
         }
         System.out.println(total);
     }

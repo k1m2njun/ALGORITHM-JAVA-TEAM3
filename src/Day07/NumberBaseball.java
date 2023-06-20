@@ -15,9 +15,11 @@ public class NumberBaseball {
             numInfo[i][1] = scanner.nextInt();
         }
 
+        //중복이 안되므로 123부터 987까지 검사
         int tmp = 123;
         int count=0;
         while(tmp++ <= 987){
+            //자릿수 저장
             int hundreds = tmp / 100;
             int tens = tmp / 10 % 10;
             int units = tmp % 10;
