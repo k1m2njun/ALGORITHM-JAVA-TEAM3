@@ -26,6 +26,10 @@ public class Programmers150369 {
         
         return answer;
     }
+	
+	public static int hashFunc(int key) {
+		return (key % 5);
+	}
 
 	public static void main(String[] args) {
 		
